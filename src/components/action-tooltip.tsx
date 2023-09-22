@@ -1,0 +1,30 @@
+'use client'
+import { type ReactNode } from "react"
+
+import {
+  Tooltip, TooltipContent, TooltipProvider, TooltipTrigger
+} from "@/components/ui/tooltip"
+
+interface ActionTooltipProps {
+  label: string
+  children: ReactNode
+  side?: "left" | "right" | "top" | "bottom"
+  align?: "start" | "center" | "end"
+}
+
+export const ActionTooltip = ({ children, label, side, align }: ActionTooltipProps) => {
+  return (
+    <TooltipProvider>
+      <Tooltip delayDuration={50}>
+        <TooltipTrigger asChild>
+          {children}
+        </TooltipTrigger>
+        <TooltipContent side={side} align={align}>
+          <p className="font-semibold text-sm capitalize">
+            {label.toLowerCase()}
+          </p>
+        </TooltipContent>
+      </Tooltip>
+    </TooltipProvider>
+  )
+}
