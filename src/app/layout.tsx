@@ -1,6 +1,7 @@
-import { ThemeProvider } from '@/components/providers/theme-provider'
 import { cn } from '@/lib/utils'
+import { ThemeProvider } from '@/components/providers/theme-provider'
 import { ClerkProvider } from '@clerk/nextjs'
+import { ModalProvider } from '@/components/providers/modal-provider'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -22,11 +23,12 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body className={cn('bg-white dark:bg-[#313338]')}>
           <ThemeProvider
-          attribute='class'
-          defaultTheme='dark'
-          enableSystem={false}
-          storageKey='discord-theme'
+            attribute='class'
+            defaultTheme='dark'
+            enableSystem={false}
+            storageKey='discord-theme'
           >
+            <ModalProvider />
             {children}
           </ThemeProvider>
         </body>
