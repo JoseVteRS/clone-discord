@@ -5,6 +5,7 @@ import { useIsMounted } from "@/hooks/use-is-mounted"
 import { InviteModal } from "@/components/modals/invite-modal"
 import { EditServerModal } from "@/components/modals/edit-server-modal"
 import { MembersModal } from "../modals/members-modal"
+import { CreateChannelModal } from "../modals/create-channel"
 
 export const ModalProvider = () => {
 
@@ -18,6 +19,7 @@ export const ModalProvider = () => {
       <InviteModal />
       <EditServerModal />
       <MembersModal />
+      <CreateChannelModal />
     </>
   )
 }
