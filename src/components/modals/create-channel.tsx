@@ -32,6 +32,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { useModal } from "@/hooks/use-modal-store"
 import { ChannelType } from "@prisma/client"
+import { useEffect } from "react";
 
 const formSchema = z.object({
   name: z.string()
@@ -58,6 +59,14 @@ export const CreateChannelModal = () => {
       type: channelType || ChannelType.TEXT,
     }
   });
+
+  useEffect(() => {
+    if (channelType) {
+      form.setValue("type", channelType);
+    } else {
+      form.setValue("type", ChannelType.TEXT);
+    }
+  }, [channelType, form]);
 
   const isLoading = form.formState.isSubmitting;
 

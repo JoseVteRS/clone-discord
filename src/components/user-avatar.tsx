@@ -6,7 +6,7 @@ interface UserAvarProps {
   className?: string
 }
 
-export const UserAvar = ({ src, className }: UserAvarProps) => {
+export const UserAvatar = ({ src, className }: UserAvarProps) => {
   return (
     <Avatar className={cn(
       'h-7 w-7 md:h-10 md:w-10',

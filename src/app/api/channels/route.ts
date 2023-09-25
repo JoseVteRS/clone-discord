@@ -33,7 +33,8 @@ export async function POST(req: Request) {
         channels: {
           create: {
             profileId: profile.id,
-            name
+            name,
+            type,
           }
         }
       }
