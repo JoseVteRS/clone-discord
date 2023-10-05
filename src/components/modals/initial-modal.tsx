@@ -37,7 +37,7 @@ export const InitialModal = () => {
   const router = useRouter()
 
   const form = useForm({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema as any),
     defaultValues: {
       name: "",
       imageUrl: ""

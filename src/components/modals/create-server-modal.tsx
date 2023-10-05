@@ -38,7 +38,7 @@ export const CreateServerModal = () => {
   const isModalOpen = isOpen && type === "createServer"
 
   const form = useForm({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(formSchema as any),
     defaultValues: {
       name: "",
       imageUrl: ""

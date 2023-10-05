@@ -2,7 +2,7 @@
 'use client'
 
 import { MemberRole } from "@prisma/client";
-import { ServerWithMembersWithProfiles } from "../../../types";
+import { ServerWithMembersWithProfiles } from "../../types";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
 import { ChevronDown, LogOut, PlusCircle, Settings, TrashIcon, UserPlus, Users } from "lucide-react";
 import { useModal } from "@/hooks/use-modal-store";
