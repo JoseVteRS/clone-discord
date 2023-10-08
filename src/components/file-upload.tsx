@@ -1,9 +1,9 @@
 "use client"
 
+import Image from "next/image";
 import { FileIcon, X } from "lucide-react"
 import { UploadButton, UploadDropzone, Uploader } from "@/lib/uploadthing"
-import "@uploadthing/react/styles.css";
-import Image from "next/image";
+// import "@uploadthing/react/styles.css";
 
 interface FileUploadProps {
   onChange: (url?: string) => void

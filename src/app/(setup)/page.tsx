@@ -23,9 +23,6 @@ const SetupPage = async () => {
 
   return <InitialModal />;
 
-  // return (
-  //   <h1>Initial point</h1>
-  // )
 }
 
 export default SetupPage;
